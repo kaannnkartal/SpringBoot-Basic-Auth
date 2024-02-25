@@ -38,7 +38,6 @@ public class User implements UserDetails {
     @JoinTable(name = "authorities", joinColumns = @JoinColumn(name = "user_id"))
     @Column(name = "role", nullable = false)
     // Uygulama tarafına bir enum'a karşılık geldiğini soylemnis oluyoruz.
-
     @Enumerated(EnumType.STRING)
     private Set<Role> authorities;
 
